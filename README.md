@@ -7,4 +7,5 @@ Previous computer models have successfully predicted cardiac growth and remodeli
 
 # Instructions for use:
 Growth_Circulation_Model_MAIN_AAH_20221103.m is the entry point for the model. Default settings will simulate three years of normal somatic growth, with hemodynamic outputs saved at the end of the simulation.
-plottingResults.m will reproduce Figures 5-8 and 10 from the above paper
+
+plottingResults.m will reproduce Figures 5-8 and 10 from the above paper. Note that due to size limitations, you will need to run a somatic simulation and a coarctation simulation and save their outputs to /sampleOutput in order to plot the figures as intended.
