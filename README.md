@@ -1,2 +1,10 @@
 # Somatic-Infant-Growth-Model
-A computational model of ventricular dimensions and hemodynamics in growing infants
+Model used in: Hiebing AA, Pieper RG, Witzenburg CM (2023) A Computational Model of Ventricular Dimensions and Hemodynamics in Growing Infants. Journal of Biomechanical Engineering 145:101007. https://doi.org/10.1115/1.4062779
+
+
+# Abstract:
+Previous computer models have successfully predicted cardiac growth and remodeling in adults with pathologies. However, applying these models to infants is complicated by the fact that they also undergo normal, somatic cardiac growth and remodeling. Therefore, we designed a computational model to predict ventricular dimensions and hemodynamics in healthy, growing infants by modifying an adult canine left ventricular growth model. The heart chambers were modeled as time-varying elastances coupled to a circuit model of the circulation. Circulation parameters were allometrically scaled and adjusted for maturation to simulate birth through 3 yrs of age. Ventricular growth was driven by perturbations in myocyte strain. The model successfully matched clinical measurements of pressures, ventricular and atrial volumes, and ventricular thicknesses within two standard deviations of multiple infant studies. To test the model, we input 10th and 90th percentile infant weights. Predicted volumes and thicknesses decreased and increased within normal ranges and pressures were unchanged. When we simulated coarctation of the aorta, systemic blood pressure, left ventricular thickness, and left ventricular volume all increased, following trends in clinical data. Our model enables a greater understanding of somatic and pathological growth in infants with congenital heart defects. Its flexibility and computational efficiency when compared to models employing more complex geometries allow for rapid analysis of pathological mechanisms affecting cardiac growth and hemodynamics.
+
+# Instructions for use:
+Growth_Circulation_Model_MAIN_AAH_20221103.m is the entry point for the model. Default settings will simulate three years of normal somatic growth, with hemodynamic outputs saved at the end of the simulation.
+plottingResults.m will reproduce Figures 5-8 and 10 from the above paper
