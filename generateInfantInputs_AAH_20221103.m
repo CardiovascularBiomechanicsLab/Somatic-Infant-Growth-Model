@@ -13,7 +13,7 @@ function inputSet = generateInfantInputs_AAH_20221103(GrowthTime,weight_percenti
 
 % Read in weight percentiles
 if weight_percentile == 50
-    weight_input = readmatrix('inputData/weight50th.csv');%col 1 is weight in kg, col 2 is BSA in m^2, col 3 is age in weeks, col 4 is age in days
+    weight_input = readmatrix('inputData/weight50th.csv');
 elseif weight_percentile == 90
     weight_input = readmatrix('inputData/weight90th.csv');
 elseif weight_percentile == 10
@@ -24,8 +24,8 @@ elseif weight_percentile == 'D'
     weight_input = readmatrix('inputData/weight_GrpD');
 end
 
-weight = weight_input(1:GrowthTime+1,1);
-age = weight_input(1:GrowthTime+1,4);
+weight = weight_input(1:GrowthTime+1,2);
+age = weight_input(1:GrowthTime+1,1);
 
 
 %% Generate Inputs
@@ -152,7 +152,8 @@ h0_s(:,2) = (((B*(3/7)/2).*r0_s(:,2))./b); % RV
 % heart rate entered manually
 HR = readmatrix('inputData/HR.csv'); % from 50th percentile in Fleming et al., "Normal ranges of heart rate and respiratory rate in children from birth to 18 years of age: a systematic review of observational studies.," Lancet., vol. 377, no. 9770, pp. 1011-1018, Mar. 2011.
 weight50=readmatrix('inputData/weight50th.csv');
-HR = HR(1:GrowthTime+1,1);
+weight50 = weight50(:,2);
+HR = HR(1:GrowthTime+1,2);
 % adjusting for different weight percentiles
 HRnew=HR.*(weight./weight50(:,1)).^(-1/4);
 HR=HRnew;

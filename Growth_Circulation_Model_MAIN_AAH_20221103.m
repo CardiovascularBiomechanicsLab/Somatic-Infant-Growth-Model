@@ -156,7 +156,7 @@ Vint= Volumes(1,:)./sum(Volumes(1,:)); %new proportion of volumes throughout the
              Fg, Fg_R, growthparams, HLHS, r0_s, h0_s, iteration_growth, somaticSetpoints(iteration_growth,:), generateSetpoints);
          
          %Computing the altered LV pressure-volume parameters
-         [LVparameters(iteration_growth+1,:),RVparameters(iteration_growth+1,:)]=Recomputing_LVRV_params(r0(iteration_growth+1,:), h0(iteration_growth+1,:),  ...
+        [LVparameters(iteration_growth+1,:),RVparameters(iteration_growth+1,:)]=Recomputing_LVRV_params(r0(iteration_growth+1,:), h0(iteration_growth+1,:),  ...
              a(iteration_growth+1,:),b(iteration_growth+1,:), ees(iteration_growth+1,:), HLHS); 
          
          %Adjusting "Stressed" Blood Volume      
